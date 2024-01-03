@@ -1,0 +1,71 @@
+#include <Keyboard.h>
+  // The last time I did any programming was AP Java in... 2007? So this code could be much better but I am already way too deep into a dumb white elephant project so sue me
+  //use '//' to activate or deactive the options
+
+void setup() {
+
+  pinMode(2, INPUT_PULLUP);
+  Keyboard.begin();
+}
+
+void loop() {
+  if (digitalRead(2) == HIGH) {
+  
+  //KEYSTROKE OPTION 1:
+  //For single keystroke option. To alter text, replace letter between single quotes.
+  //Keyboard.write('F');
+
+  //KEYSTROKE OPTION 2:
+  //For Double keystroke with non-ascii keys
+  //You can find a list of all acceptable special keys here: https://www.arduino.cc/reference/en/language/functions/usb/keyboard/keyboardmodifiers/
+  Keyboard.press(KEY_LEFT_ALT);
+  delay(100);
+  Keyboard.press(KEY_F4);
+
+  //KEYSTROKE OPTION 3:
+  //For string of text
+  //note the comma is a keyboard.press command
+    //Keyboard.write('P');
+    //delay(10);
+    //Keyboard.write('e');
+    //delay(10);
+    //Keyboard.write('r');
+    //delay(10);
+    //Keyboard.write(' ');
+    //delay(10);
+    //Keyboard.write('m');
+    //delay(10);
+    //Keyboard.write('y');
+    //delay(10);
+    //Keyboard.write(' ');
+    //delay(10);
+    //Keyboard.write('l');
+    //delay(10);
+    //Keyboard.write('a');
+    //delay(10);
+    //Keyboard.write('s');
+    //delay(10);
+    //Keyboard.write('t');
+    //delay(10);
+    //Keyboard.write(' ');
+    //delay(10);
+    //Keyboard.write('e');
+    //delay(10);
+    //Keyboard.write('m');
+    //delay(10);
+    //Keyboard.write('a');
+    //delay(10);
+    //Keyboard.write('i');
+    //delay(10);
+    //Keyboard.write('l');
+    //delay(10);
+    //Keyboard.press(',');
+    //delay(10);
+    //Keyboard.write(' ');
+    //delay(10);
+  
+  }
+   else {
+   Keyboard.releaseAll();
+  }
+}
